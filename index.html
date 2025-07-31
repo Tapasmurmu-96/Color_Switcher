@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Switcher</title>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body>
+    <h1 id="h1-tag">Welcome to the Color Switcher</h1>
+    <div id="div-tag">
+     <input type="text" id="color-Input" placeholder="Enter a color name or hex code(e.g., white or #ffffff)">
+     <button id="apply-Color-Button">Apply Color</button>
+    
+    </div>
+    <p id="current-Color">Current Color: <span id="color-Value">white</span></p>
+   
+
+    <script>
+
+        let h1Tag = document.getElementById('h1-tag');
+        h1Tag.style.color = 'white';
+        h1Tag.style.backgroundColor = 'black';
+        h1Tag.style.padding = '20px';
+        h1Tag.style.textAlign = 'center';
+        h1Tag.style.fontFamily = 'Arial, sans-serif';
+        h1Tag.style.fontSize = '2em';
+        h1Tag.style.borderRadius = '10px';
+        h1Tag.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+        h1Tag.style.transition = 'background-color 0.5s, color 0.5s';
+        h1Tag.style.margin = '20px';
+        h1Tag.style.textTransform = 'uppercase';
+        h1Tag.style.letterSpacing = '2px';
+        h1Tag.style.textShadow = '2px 2px 4px rgba(0, 0, 0, 0.5)';
+        h1Tag.style.border = '2px solid white';
+        h1Tag.style.cursor = 'pointer';
+
+
+        let divTag = document.getElementById('div-tag');
+        divTag.style.display = 'flex';
+        divTag.style.justifyContent = 'center';
+        divTag.style.alignItems = 'center';
+       
+
+        
+
+        let colorInput = document.getElementById('color-Input');
+        colorInput.style.padding = '10px';
+        colorInput.style.border = '1px solid #ccc';
+        colorInput.style.borderRadius = '5px';
+        colorInput.style.fontSize = '1em';
+        colorInput.style.width = '200px';
+        colorInput.style.margin = '10px';
+        colorInput.style.fontFamily = 'Arial, sans-serif';
+        colorInput.style.transition = 'border-color 0.3s';
+
+        let applyColorButton = document.getElementById('apply-Color-Button');
+        applyColorButton.style.backgroundColor = 'green';
+        applyColorButton.style.color = 'white';
+        applyColorButton.style.padding = '10px 20px';
+        applyColorButton.style.border = 'none';
+        applyColorButton.style.borderRadius = '5px';
+        applyColorButton.style.cursor = 'pointer';
+        applyColorButton.style.fontSize = '1em';
+        applyColorButton.style.transition = 'background-color 0.3s, transform 0.3s';
+        applyColorButton.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.1)';
+        applyColorButton.style.margin = '10px';
+        applyColorButton.style.fontFamily = 'Arial, sans-serif';
+        applyColorButton.addEventListener('click', function() {
+            let colorValue = colorInput.value.trim();
+            if (colorValue) {
+                document.body.style.backgroundColor = colorValue;
+                document.getElementById('color-Value').textContent = colorValue;
+            } else {
+                alert('Please enter a valid color name or hex code.');
+            }
+        });
+
+        let currentColor = document.getElementById('current-Color');
+        currentColor.style.textAlign = 'center';
+        currentColor.style.fontFamily = 'Arial, sans-serif';
+        currentColor.style.fontSize = '1.2em';
+        currentColor.style.marginTop = '20px';
+        currentColor.style.color = 'black';
+        currentColor.style.fontWeight = 'bold';
+        currentColor.style.transition = 'color 0.3s';
+        currentColor.style.textShadow = '1px 1px 2px rgba(0, 0, 0, 0.3)';
+        currentColor.style.padding = '10px';
+        currentColor.style.borderRadius = '5px';
+        currentColor.style.backgroundColor = 'rgba(255, 255, 255, 0.8)';
+        currentColor.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.1)';
+        currentColor.style.border = '1px solid #ccc';
+        currentColor.style.display = 'inline-block';
+        currentColor.style.width = 'fit-content';
+        currentColor.style.margin = '20px auto';
+        currentColor.style.cursor = 'default';
+        currentColor.style.textTransform = 'capitalize';
+        currentColor.style.letterSpacing = '1px';
+        currentColor.style.backgroundImage = 'linear-gradient(to right, #f0f0f0, #e0e0e0)';
+        currentColor.style.alignItems = 'center';
+        currentColor.style.display = 'flex';
+        currentColor.style.justifyContent = 'center';
+
+        
+        
+
+    </script>
+</body>
+</html>
